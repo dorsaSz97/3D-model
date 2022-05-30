@@ -1,0 +1,99 @@
+@use '../abstracts' as *;
+
+.speakerL {
+  position: absolute;
+  left: 20px;
+  top: 315px;
+
+  width: 7.5px;
+  height: 12px;
+
+  $width: 7.5px;
+  $height: 80px;
+  $depth: 6px;
+  @include cube($width, $height, $depth);
+
+  transform: translateZ(80px);
+
+  & > * {
+    background: $color-white;
+  }
+
+  &__front {
+    background: linear-gradient(to bottom, $color-white, $color-grey-light);
+  }
+
+  &__right {
+    background: linear-gradient(
+      to bottom,
+      $color-black-dark,
+      $color-black-medium
+    );
+
+    label {
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 10px;
+      height: 11px;
+      background: url('../assets/img/speaker.png') center center/cover no-repeat;
+      cursor: pointer;
+    }
+    label:nth-child(1) {
+      top: 10px;
+    }
+    label:nth-child(2) {
+      bottom: 10px;
+    }
+  }
+}
+
+.speakerR {
+  position: absolute;
+  left: 20px;
+  top: 135px;
+
+  width: 7.5px;
+  height: 12px;
+
+  $width: 7.5px;
+  $height: 80px;
+  $depth: 6px;
+  @include cube($width, $height, $depth);
+
+  transform: translateZ(80px);
+
+  & > * {
+    background: $color-white;
+  }
+
+  &__front {
+    background: linear-gradient(to bottom, $color-white, $color-grey-light);
+  }
+
+  &__right {
+    background: linear-gradient(
+      to bottom,
+      $color-black-dark,
+      $color-black-medium
+    );
+
+    label {
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 10px;
+      height: 11px;
+      background: url('../assets/img/speaker.png') center center/cover no-repeat;
+      cursor: pointer;
+    }
+    label:nth-child(1) {
+      top: 10px;
+    }
+    label:nth-child(2) {
+      bottom: 10px;
+    }
+  }
+}

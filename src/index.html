@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>3D Room</title>
+  </head>
+
+  <body>
+    <div class="house">
+      <!-- Floor -->
+      <div class="floor">
+        <div class="floor__front side"></div>
+        <div class="floor__back side"></div>
+        <div class="floor__right side"></div>
+        <div class="floor__left side"></div>
+        <div class="floor__top side"></div>
+        <div class="floor__bottom side"></div>
+      </div>
+
+      <!-- Walls -->
+      <div class="hwallL">
+        <div class="hwallL__front side"></div>
+        <div class="hwallL__back side"></div>
+        <div class="hwallL__right side"></div>
+        <div class="hwallL__left side"></div>
+        <div class="hwallL__top side"></div>
+        <div class="hwallL__bottom side"></div>
+      </div>
+
+      <div class="hwallR">
+        <div class="hwallR__front side"></div>
+        <div class="hwallR__back side"></div>
+        <div class="hwallR__right side"></div>
+        <div class="hwallR__left side"></div>
+        <div class="hwallR__top side"></div>
+        <div class="hwallR__bottom side"></div>
+      </div>
+
+      <div class="wallL">
+        <div class="wallL__front side"></div>
+        <div class="wallL__back side"></div>
+        <div class="wallL__right side"></div>
+        <div class="wallL__left side"></div>
+        <div class="wallL__top side"></div>
+        <div class="wallL__bottom side"></div>
+      </div>
+
+      <div class="wallR">
+        <div class="wallR__front side"></div>
+        <div class="wallR__back side"></div>
+        <div class="wallR__right side"></div>
+        <div class="wallR__left side"></div>
+        <div class="wallR__top side"></div>
+        <div class="wallR__bottom side"></div>
+      </div>
+
+      <!-- Door -->
+      <div class="door">
+        <div class="door-main">
+          <div class="door-main__front side"></div>
+          <div class="door-main__back side"></div>
+          <div class="door-main__right side"></div>
+          <div class="door-main__left side"></div>
+          <div class="door-main__top side"></div>
+          <div class="door-main__bottom side"></div>
+        </div>
+
+        <div class="door-frameL">
+          <div class="door-frameL__front side"></div>
+          <div class="door-frameL__back side"></div>
+          <div class="door-frameL__right side"></div>
+          <div class="door-frameL__left side"></div>
+          <div class="door-frameL__top side"></div>
+          <div class="door-frameL__bottom side"></div>
+        </div>
+
+        <div class="door-frameR">
+          <div class="door-frameR__front side"></div>
+          <div class="door-frameR__back side"></div>
+          <div class="door-frameR__right side"></div>
+          <div class="door-frameR__left side"></div>
+          <div class="door-frameR__top side"></div>
+          <div class="door-frameR__bottom side"></div>
+        </div>
+
+        <div class="door-frameT">
+          <div class="door-frameT__front side"></div>
+          <div class="door-frameT__back side"></div>
+          <div class="door-frameT__right side"></div>
+          <div class="door-frameT__left side"></div>
+          <div class="door-frameT__top side"></div>
+          <div class="door-frameT__bottom side"></div>
+        </div>
+      </div>
+
+      <!-- Light -->
+      <input type="checkbox" id="lighton" />
+      <div class="switch">
+        <div class="switch__front side"></div>
+        <div class="switch__back side"></div>
+        <div class="switch__right side"><label for="lighton"></label></div>
+        <div class="switch__left side"></div>
+        <div class="switch__top side"></div>
+        <div class="switch__bottom side"></div>
+      </div>
+
+      <div class="light">
+        <div class="light__front side"></div>
+        <div class="light__back side"></div>
+        <div class="light__right side"></div>
+        <div class="light__left side"></div>
+        <div class="light__top side"></div>
+        <div class="light__bottom side"></div>
+      </div>
+
+      <!-- TV -->
+      <input
+        class="tv-input"
+        type="radio"
+        id="tvchannel"
+        name="channel"
+        value="channel1"
+      />
+      <input
+        class="tv-input"
+        type="radio"
+        id="tvsnow"
+        name="channel"
+        value="snow"
+      />
+      <input
+        class="tv-input"
+        type="radio"
+        id="tvoff"
+        name="channel"
+        value="off"
+      />
+
+      <div class="tv">
+        <div class="tv__front side"></div>
+        <div class="tv__back side"></div>
+        <div class="tv__right side">
+          <video autoplay muted loop="true">
+            <source src="assets/img/channel1.mp4" type="video/mp4" />
+          </video>
+          <label for="tvoff"></label>
+        </div>
+        <div class="tv__left side"></div>
+        <div class="tv__top side"></div>
+        <div class="tv__bottom side"></div>
+      </div>
+
+      <!-- Table -->
+      <div class="table">
+        <div class="table-main">
+          <div class="table-main__right side"></div>
+          <div class="table-main__front side"></div>
+          <div class="table-main__back side"></div>
+          <div class="table-main__left side"></div>
+          <div class="table-main__top side"></div>
+          <div class="table-main__bottom side"></div>
+
+          <div class="remote">
+            <div class="remote__front side"></div>
+            <div class="remote__back side"></div>
+            <div class="remote__right side"></div>
+            <div class="remote__left side"></div>
+            <div class="remote__top side">
+              <label for="tvsnow"></label><label for="tvchannel"></label>
+            </div>
+            <div class="remote__bottom side"></div>
+          </div>
+        </div>
+        <div class="table-foot1">
+          <div class="table-foot1__front side"></div>
+          <div class="table-foot1__back side"></div>
+          <div class="table-foot1__right side"></div>
+          <div class="table-foot1__left side"></div>
+          <div class="table-foot1__top side"></div>
+          <div class="table-foot1__bottom side"></div>
+        </div>
+        <div class="table-foot2">
+          <div class="table-foot2__front side"></div>
+          <div class="table-foot2__back side"></div>
+          <div class="table-foot2__right side"></div>
+          <div class="table-foot2__left side"></div>
+          <div class="table-foot2__top side"></div>
+          <div class="table-foot2__bottom side"></div>
+        </div>
+        <div class="table-foot3">
+          <div class="table-foot3__front side"></div>
+          <div class="table-foot3__back side"></div>
+          <div class="table-foot3__right side"></div>
+          <div class="table-foot3__left side"></div>
+          <div class="table-foot3__top side"></div>
+          <div class="table-foot3__bottom side"></div>
+        </div>
+        <div class="table-foot4">
+          <div class="table-foot4__front side"></div>
+          <div class="table-foot4__back side"></div>
+          <div class="table-foot4__right side"></div>
+          <div class="table-foot4__left side"></div>
+          <div class="table-foot4__top side"></div>
+          <div class="table-foot4__bottom side"></div>
+        </div>
+      </div>
+
+      <!-- Speakers -->
+      <input type="checkbox" name="music" id="musicon" />
+      <audio class="music" loop muted>
+        <source src="assets/img/madness.mp3" type="audio/mp3" />
+      </audio>
+
+      <div class="speakerL" id="speakeron">
+        <div class="speakerL__front side"></div>
+        <div class="speakerL__back side"></div>
+        <div class="speakerL__right side">
+          <label for="musicon"></label>
+          <label for="musicon"></label>
+        </div>
+        <div class="speakerL__left side"></div>
+        <div class="speakerL__top side"></div>
+        <div class="speakerL__bottom side"></div>
+      </div>
+
+      <div class="speakerR">
+        <div class="speakerR__front side"></div>
+        <div class="speakerR__back side"></div>
+        <div class="speakerR__right side">
+          <label for="musicon"></label>
+          <label for="musicon"></label>
+        </div>
+        <div class="speakerR__left side"></div>
+        <div class="speakerR__top side"></div>
+        <div class="speakerR__bottom side"></div>
+      </div>
+
+      <!-- Plant -->
+      <div class="plant">
+        <div class="plant-green">
+          <figure class="img">
+            <img src="assets/img/plant.webp" />
+          </figure>
+          <figure class="img">
+            <img src="assets/img/plant.webp" />
+          </figure>
+          <figure class="img">
+            <img src="assets/img/plant.webp" />
+          </figure>
+        </div>
+
+        <div class="plant-vase">
+          <div class="plant-vase__front side"></div>
+          <div class="plant-vase__back side"></div>
+          <div class="plant-vase__right side"></div>
+          <div class="plant-vase__left side"></div>
+          <div class="plant-vase__top side"></div>
+          <div class="plant-vase__bottom side"></div>
+        </div>
+      </div>
+
+      <!-- Posters -->
+      <div class="poster1">
+        <div class="poster1__front side"></div>
+        <div class="poster1__back side"></div>
+        <div class="poster1__right side"></div>
+        <div class="poster1__left side"></div>
+        <div class="poster1__top side"></div>
+        <div class="poster1__bottom side"></div>
+      </div>
+
+      <div class="poster2">
+        <div class="poster2__front side"></div>
+        <div class="poster2__back side"></div>
+        <div class="poster2__right side"></div>
+        <div class="poster2__left side"></div>
+        <div class="poster2__top side"></div>
+        <div class="poster2__bottom side"></div>
+      </div>
+
+      <!-- Shelf -->
+      <div class="shelf">
+        <div class="shelf__front side"></div>
+        <div class="shelf__back side"></div>
+        <div class="shelf__right side"></div>
+        <div class="shelf__left side"></div>
+        <div class="shelf__top side"></div>
+        <div class="shelf__bottom side"></div>
+
+        <div class="book book--blue">
+          <div class="book__front side"></div>
+          <div class="book__back side"></div>
+          <div class="book__right side"></div>
+          <div class="book__left side"></div>
+          <div class="book__top side"></div>
+          <div class="book__bottom side"></div>
+        </div>
+        <div class="book book--brown">
+          <div class="book__front side"></div>
+          <div class="book__back side"></div>
+          <div class="book__right side"></div>
+          <div class="book__left side"></div>
+          <div class="book__top side"></div>
+          <div class="book__bottom side"></div>
+        </div>
+        <div class="book book--green">
+          <div class="book__front side"></div>
+          <div class="book__back side"></div>
+          <div class="book__right side"></div>
+          <div class="book__left side"></div>
+          <div class="book__top side"></div>
+          <div class="book__bottom side"></div>
+        </div>
+        <div class="book book--red">
+          <div class="book__front side"></div>
+          <div class="book__back side"></div>
+          <div class="book__right side"></div>
+          <div class="book__left side"></div>
+          <div class="book__top side"></div>
+          <div class="book__bottom side"></div>
+        </div>
+      </div>
+
+      <!-- Chair -->
+      <div class="chair">
+        <div class="chair-lower">
+          <div class="wheel1">
+            <div class="wheel1__front side"></div>
+            <div class="wheel1__back side"></div>
+            <div class="wheel1__right side"></div>
+            <div class="wheel1__left side"></div>
+            <div class="wheel1__top side"></div>
+            <div class="wheel1__bottom side"></div>
+            <div class="base1">
+              <div class="base1__front side"></div>
+              <div class="base1__back side"></div>
+              <div class="base1__right side"></div>
+              <div class="base1__left side"></div>
+              <div class="base1__top side"></div>
+              <div class="base1__bottom side"></div>
+            </div>
+          </div>
+          <div class="wheel2">
+            <div class="wheel2__front side"></div>
+            <div class="wheel2__back side"></div>
+            <div class="wheel2__right side"></div>
+            <div class="wheel2__left side"></div>
+            <div class="wheel2__top side"></div>
+            <div class="wheel2__bottom side"></div>
+            <div class="base2">
+              <div class="base2__front side"></div>
+              <div class="base2__back side"></div>
+              <div class="base2__right side"></div>
+              <div class="base2__left side"></div>
+              <div class="base2__top side"></div>
+              <div class="base2__bottom side"></div>
+            </div>
+          </div>
+          <div class="wheel3">
+            <div class="wheel3__front side"></div>
+            <div class="wheel3__back side"></div>
+            <div class="wheel3__right side"></div>
+            <div class="wheel3__left side"></div>
+            <div class="wheel3__top side"></div>
+            <div class="wheel3__bottom side"></div>
+            <div class="base3">
+              <div class="base3__front side"></div>
+              <div class="base3__back side"></div>
+              <div class="base3__right side"></div>
+              <div class="base3__left side"></div>
+              <div class="base3__top side"></div>
+              <div class="base3__bottom side"></div>
+            </div>
+          </div>
+          <div class="wheel4">
+            <div class="wheel4__front side"></div>
+            <div class="wheel4__back side"></div>
+            <div class="wheel4__right side"></div>
+            <div class="wheel4__left side"></div>
+            <div class="wheel4__top side"></div>
+            <div class="wheel4__bottom side"></div>
+            <div class="base4">
+              <div class="base4__front side"></div>
+              <div class="base4__back side"></div>
+              <div class="base4__right side"></div>
+              <div class="base4__left side"></div>
+              <div class="base4__top side"></div>
+              <div class="base4__bottom side"></div>
+            </div>
+          </div>
+          <div class="wheel5">
+            <div class="wheel5__front side"></div>
+            <div class="wheel5__back side"></div>
+            <div class="wheel5__right side"></div>
+            <div class="wheel5__left side"></div>
+            <div class="wheel5__top side"></div>
+            <div class="wheel5__bottom side"></div>
+            <div class="base5">
+              <div class="base5__front side"></div>
+              <div class="base5__back side"></div>
+              <div class="base5__right side"></div>
+              <div class="base5__left side"></div>
+              <div class="base5__top side"></div>
+              <div class="base5__bottom side"></div>
+            </div>
+          </div>
+
+          <div class="chair-base">
+            <div class="chair-base__front side"></div>
+            <div class="chair-base__back side"></div>
+            <div class="chair-base__right side"></div>
+            <div class="chair-base__left side"></div>
+            <div class="chair-base__top side"></div>
+            <div class="chair-base__bottom side"></div>
+          </div>
+        </div>
+
+        <div class="chair-upper">
+          <div class="seat">
+            <div class="seat__front side"></div>
+            <div class="seat__back side"></div>
+            <div class="seat__right side"></div>
+            <div class="seat__left side"></div>
+            <div class="seat__top side"></div>
+            <div class="seat__bottom side"></div>
+          </div>
+          <div class="back">
+            <div class="back__front side"></div>
+            <div class="back__back side"></div>
+            <div class="back__right side"></div>
+            <div class="back__left side"></div>
+            <div class="back__top side"></div>
+            <div class="back__bottom side"></div>
+          </div>
+
+          <div class="armL">
+            <div class="armLD">
+              <div class="armLD__front side"></div>
+              <div class="armLD__back side"></div>
+              <div class="armLD__right side"></div>
+              <div class="armLD__left side"></div>
+              <div class="armLD__top side"></div>
+              <div class="armLD__bottom side"></div>
+            </div>
+            <div class="armLU">
+              <div class="armLU__front side"></div>
+              <div class="armLU__back side"></div>
+              <div class="armLU__right side"></div>
+              <div class="armLU__left side"></div>
+              <div class="armLU__top side"></div>
+              <div class="armLU__bottom side"></div>
+            </div>
+          </div>
+
+          <div class="armR">
+            <div class="armRD">
+              <div class="armRD__front side"></div>
+              <div class="armRD__back side"></div>
+              <div class="armRD__right side"></div>
+              <div class="armRD__left side"></div>
+              <div class="armRD__top side"></div>
+              <div class="armRD__bottom side"></div>
+            </div>
+            <div class="armRU">
+              <div class="armRU__front side"></div>
+              <div class="armRU__back side"></div>
+              <div class="armRU__right side"></div>
+              <div class="armRU__left side"></div>
+              <div class="armRU__top side"></div>
+              <div class="armRU__bottom side"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Desk -->
+      <div class="desk">
+        <div class="desk-main">
+          <div class="desk-main__front side"></div>
+          <div class="desk-main__back side"></div>
+          <div class="desk-main__right side"></div>
+          <div class="desk-main__left side"></div>
+          <div class="desk-main__top side"></div>
+          <div class="desk-main__bottom side"></div>
+        </div>
+        <div class="desk-foot1">
+          <div class="desk-foot1__front side"></div>
+          <div class="desk-foot1__back side"></div>
+          <div class="desk-foot1__right side"></div>
+          <div class="desk-foot1__left side"></div>
+          <div class="desk-foot1__top side"></div>
+          <div class="desk-foot1__bottom side"></div>
+        </div>
+        <div class="desk-foot2">
+          <div class="desk-foot2__front side"></div>
+          <div class="desk-foot2__back side"></div>
+          <div class="desk-foot2__right side"></div>
+          <div class="desk-foot2__left side"></div>
+          <div class="desk-foot2__top side"></div>
+          <div class="desk-foot2__bottom side"></div>
+        </div>
+        <div class="desk-foot3">
+          <div class="desk-foot3__front side"></div>
+          <div class="desk-foot3__back side"></div>
+          <div class="desk-foot3__right side"></div>
+          <div class="desk-foot3__left side"></div>
+          <div class="desk-foot3__top side"></div>
+          <div class="desk-foot3__bottom side"></div>
+        </div>
+        <div class="desk-foot4">
+          <div class="desk-foot4__front side"></div>
+          <div class="desk-foot4__back side"></div>
+          <div class="desk-foot4__right side"></div>
+          <div class="desk-foot4__left side"></div>
+          <div class="desk-foot4__top side"></div>
+          <div class="desk-foot4__bottom side"></div>
+        </div>
+      </div>
+
+      <!-- Laptop -->
+      <input type="checkbox" id="laptopclose" />
+      <div class="laptop">
+        <div class="screen">
+          <div class="screen__front side">
+            <label for="laptopclose"></label>
+          </div>
+          <div class="screen__back side">
+            <label for="laptopclose"></label>
+          </div>
+          <div class="screen__right side"></div>
+          <div class="screen__left side"></div>
+          <div class="screen__top side"></div>
+          <div class="screen__bottom side"></div>
+        </div>
+
+        <div class="body">
+          <div class="body__front side"></div>
+          <div class="body__back side"></div>
+          <div class="body__right side"></div>
+          <div class="body__left side"></div>
+          <div class="body__top side"></div>
+          <div class="body__bottom side"></div>
+
+          <div class="keyboard">
+            <div class="keys">
+              <div class="key"></div>
+              <div class="key"></div>
+              <div class="key"></div>
+              <div class="key"></div>
+              <div class="key"></div>
+              <div class="key space"></div>
+              <div class="key"></div>
+              <div class="key"></div>
+              <div class="key"></div>
+              <div class="key"></div>
+              <div class="key"></div>
+              <div class="key"></div>
+              <div class="key"></div>
+              <div class="key"></div>
+              <div class="key"></div>
+              <div class="key"></div>
+              <div class="key"></div>
+              <div class="key"></div>
+              <div class="key"></div>
+              <div class="key"></div>
+              <div class="key"></div>
+              <div class="key"></div>
+              <div class="key"></div>
+              <div class="key"></div>
+              <div class="key"></div>
+              <div class="key"></div>
+              <div class="key"></div>
+              <div class="key"></div>
+              <div class="key"></div>
+              <div class="key"></div>
+              <div class="key"></div>
+              <div class="key"></div>
+              <div class="key"></div>
+              <div class="key"></div>
+              <div class="key"></div>
+              <div class="key"></div>
+              <div class="key"></div>
+              <div class="key"></div>
+              <div class="key"></div>
+              <div class="key"></div>
+              <div class="key"></div>
+              <div class="key"></div>
+              <div class="key"></div>
+              <div class="key"></div>
+              <div class="key"></div>
+              <div class="key"></div>
+              <div class="key"></div>
+              <div class="key"></div>
+              <div class="key"></div>
+              <div class="key"></div>
+              <div class="key"></div>
+              <div class="key"></div>
+              <div class="key"></div>
+              <div class="key"></div>
+              <div class="key"></div>
+              <div class="key"></div>
+              <div class="key"></div>
+              <div class="key"></div>
+              <div class="key"></div>
+              <div class="key f"></div>
+              <div class="key f"></div>
+              <div class="key f"></div>
+              <div class="key f"></div>
+              <div class="key f"></div>
+              <div class="key f"></div>
+              <div class="key f"></div>
+              <div class="key f"></div>
+              <div class="key f"></div>
+              <div class="key f"></div>
+              <div class="key f"></div>
+              <div class="key f"></div>
+              <div class="key f"></div>
+              <div class="key f"></div>
+              <div class="key f"></div>
+              <div class="key f"></div>
+            </div>
+            <div class="touchpad"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sofa -->
+      <div class="sofaL">
+        <div class="sofaL-left">
+          <div class="sofaL-left__front side"></div>
+          <div class="sofaL-left__back side"></div>
+          <div class="sofaL-left__right side"></div>
+          <div class="sofaL-left__left side"></div>
+          <div class="sofaL-left__top side"></div>
+          <div class="sofaL-left__bottom side"></div>
+        </div>
+
+        <div class="sofaL-bottom">
+          <div class="sofaL-bottom__front side"></div>
+          <div class="sofaL-bottom__back side"></div>
+          <div class="sofaL-bottom__right side"></div>
+          <div class="sofaL-bottom__left side"></div>
+          <div class="sofaL-bottom__top side"></div>
+          <div class="sofaL-bottom__bottom side"></div>
+        </div>
+
+        <div class="sofaL-front">
+          <div class="sofaL-front__front side"></div>
+          <div class="sofaL-front__back side"></div>
+          <div class="sofaL-front__right side"></div>
+          <div class="sofaL-front__left side"></div>
+          <div class="sofaL-front__top side"></div>
+          <div class="sofaL-front__bottom side"></div>
+        </div>
+      </div>
+
+      <div class="sofaR">
+        <div class="sofaR-right">
+          <div class="sofaR-right__front side"></div>
+          <div class="sofaR-right__back side"></div>
+          <div class="sofaR-right__right side"></div>
+          <div class="sofaR-right__left side"></div>
+          <div class="sofaR-right__top side"></div>
+          <div class="sofaR-right__bottom side"></div>
+        </div>
+
+        <div class="sofaR-bottom">
+          <div class="sofaR-bottom__front side"></div>
+          <div class="sofaR-bottom__back side"></div>
+          <div class="sofaR-bottom__right side"></div>
+          <div class="sofaR-bottom__left side"></div>
+          <div class="sofaR-bottom__top side"></div>
+          <div class="sofaR-bottom__bottom side"></div>
+        </div>
+
+        <div class="sofaR-front">
+          <div class="sofaR-front__front side"></div>
+          <div class="sofaR-front__back side"></div>
+          <div class="sofaR-front__right side"></div>
+          <div class="sofaR-front__left side"></div>
+          <div class="sofaR-front__top side"></div>
+          <div class="sofaR-front__bottom side"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

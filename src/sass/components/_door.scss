@@ -1,0 +1,137 @@
+@use '../abstracts' as *;
+
+// Door: 80*20
+.door {
+  position: absolute;
+  top: 0px;
+  left: 60px;
+
+  width: 80px;
+  height: 20px;
+
+  & > * {
+    position: absolute;
+    top: 20px;
+    transform: translateZ(5px);
+  }
+
+  // Main door: 70*4*150
+  &-main {
+    left: 5px;
+
+    width: 70px;
+    height: 4px;
+
+    $width: 70px;
+    $height: 150px;
+    $depth: 2px;
+    @include cube($width, $height, $depth);
+
+    & > * {
+      background-image: linear-gradient(
+        to right,
+        $color-black-dark,
+        lighten($color-black-dark, 1%)
+      );
+    }
+
+    &:hover {
+      .door-main__front {
+        transform-origin: bottom left;
+        transform: rotateX(-90deg) translateZ(-($height - ($depth * 2)))
+          rotateY(-25deg);
+      }
+    }
+
+    &__front {
+      transition: all 0.8s;
+
+      background-image: linear-gradient(
+        to right,
+        $color-black-dark,
+        lighten($color-black-dark, 1%)
+      );
+
+      // Door knob
+      &::after {
+        content: '';
+        position: absolute;
+        right: 5px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 10px;
+        height: 2px;
+        background-color: $color-grey-light;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.747);
+      }
+    }
+
+    &__back {
+      background: rgb(135, 203, 228);
+    }
+
+    &__bottom {
+      background: transparent;
+    }
+  }
+
+  // Frame left: 5*5*150
+  &-frameL {
+    left: 0;
+
+    width: 5px;
+    height: 5px;
+
+    $width: 5px;
+    $height: 150px;
+    $depth: 2.5px;
+    @include cube($width, $height, $depth);
+
+    & > * {
+      background: lighten($color-grey-medium, 6%);
+    }
+    &__right {
+      background: $color-grey-medium;
+    }
+  }
+
+  // Frame right: 5*5*150
+  &-frameR {
+    right: 0;
+
+    width: 5px;
+    height: 5px;
+
+    $width: 5px;
+    $height: 150px;
+    $depth: 2.5px;
+    @include cube($width, $height, $depth);
+
+    & > * {
+      background: lighten($color-grey-medium, 6%);
+    }
+  }
+
+  // Frame top: 80*5*8
+  &-frameT {
+    left: 0;
+    right: 0;
+
+    width: 80px;
+    height: 5px;
+
+    $width: 80px;
+    $height: 8px;
+    $depth: 2.5px;
+    @include cube($width, $height, $depth);
+
+    transform: translateZ(155px);
+
+    & > * {
+      background: lighten($color-grey-medium, 6%);
+    }
+    &__bottom {
+      background: $color-grey-medium;
+    }
+  }
+}

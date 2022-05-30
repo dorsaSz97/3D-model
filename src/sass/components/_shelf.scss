@@ -1,0 +1,149 @@
+@use '../abstracts' as *;
+
+// Shelf: 80*16*3
+.shelf {
+  position: absolute;
+  right: 40px;
+  top: 20px;
+
+  width: 80px;
+  height: 16px;
+
+  $width: 80px;
+  $height: 3px;
+  $depth: 8px;
+  @include cube($width, $height, $depth);
+
+  transform: translateZ(92px);
+
+  & > * {
+    background-color: $color-grey-medium;
+  }
+
+  &__front {
+    background: $color-grey-dark;
+  }
+  &__right {
+    background: $color-grey-dark;
+  }
+
+  // Book: 3*18*20
+  .book {
+    position: absolute;
+    top: 1px;
+
+    width: 3px;
+    height: 18px;
+
+    $width: 3px;
+    $height: 20px;
+    $depth: 9px;
+    @include cube($width, $height, $depth);
+    transition: all 1s;
+
+    &--blue {
+      left: 10px;
+      transform: rotateY(90deg) translateX(-6px);
+      .book__front {
+        background: $color-blue-dark;
+      }
+      .book__back {
+        background-color: $color-white;
+      }
+      .book__right {
+        background: $color-blue-medium;
+      }
+      .book__left {
+        background-color: $color-blue-medium;
+      }
+      .book__top {
+        background-color: $color-white;
+      }
+      .book__bottom {
+        background-color: $color-white;
+      }
+      &:hover {
+        transform: rotateY(90deg) translateX(-6px) translateY(10px);
+      }
+    }
+
+    &--brown {
+      left: 40px;
+      transform: translateZ(3px) rotateY(-19deg);
+      .book__front {
+        background: $color-brown-dark;
+      }
+      .book__back {
+        background-color: $color-white;
+      }
+      .book__right {
+        background: $color-brown-medium;
+      }
+      .book__left {
+        background-color: $color-brown-medium;
+      }
+      .book__top {
+        background-color: $color-white;
+      }
+      .book__bottom {
+        background-color: $color-white;
+      }
+      &:hover {
+        transform: translateZ(3px) rotateY(-19deg) translateY(10px);
+      }
+    }
+    &--red {
+      left: 10px;
+      transform: rotateY(90deg) translateX(-9.4px);
+      .book__front {
+        background: $color-red-dark;
+      }
+      .book__back {
+        background-color: $color-white;
+      }
+      .book__right {
+        background: $color-red-medium;
+      }
+      .book__left {
+        background-color: $color-red-medium;
+      }
+      .book__top {
+        background-color: $color-white;
+      }
+      .book__bottom {
+        background-color: $color-white;
+      }
+
+      &:hover {
+        transform: rotateY(90deg) translateX(-9px) translateY(10px);
+      }
+    }
+
+    &--green {
+      left: 35px;
+      transform: translateZ(3px) rotateY(-19deg);
+      .book__front {
+        background: $color-green-dark;
+      }
+      .book__back {
+        background-color: $color-white;
+      }
+      .book__right {
+        background: $color-green-medium;
+      }
+      .book__left {
+        background-color: $color-green-medium;
+      }
+      .book__top {
+        background-color: $color-white;
+      }
+      .book__bottom {
+        background-color: $color-white;
+      }
+
+      &:hover {
+        transform: translateZ(3px) rotateY(-19deg) translateY(10px);
+      }
+    }
+  }
+}

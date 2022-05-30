@@ -1,0 +1,85 @@
+@use '../abstracts' as *;
+
+// Desk: 150*58
+.desk {
+  position: absolute;
+  right: 60px;
+  top: 20px;
+
+  width: 150px;
+  height: 58px;
+
+  transform: translateZ(5px);
+
+  // Desk main: 150*58*3
+  &-main {
+    position: absolute;
+    width: 150px;
+    height: 58px;
+
+    $width: 150px;
+    $height: 3px;
+    $depth: 29px;
+    @include cube($width, $height, $depth);
+
+    transform: translateZ(40px);
+
+    & > * {
+      background: #111111;
+    }
+
+    &__top {
+      background-image: linear-gradient(45deg, #333, #111);
+    }
+  }
+
+  // Desk foot: 3*3*40
+  & > [class*='foot'] {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+
+    & > * {
+      background: darken($color-black-dark, 20%);
+    }
+  }
+
+  &-foot1 {
+    top: 5px;
+    left: 5px;
+
+    $width: 3px;
+    $height: 40px;
+    $depth: 1.5px;
+    @include cube($width, $height, $depth);
+  }
+
+  &-foot2 {
+    top: 5px;
+    right: 5px;
+
+    $width: 3px;
+    $height: 40px;
+    $depth: 1.5px;
+    @include cube($width, $height, $depth);
+  }
+
+  &-foot3 {
+    bottom: 5px;
+    left: 5px;
+
+    $width: 3px;
+    $height: 40px;
+    $depth: 1.5px;
+    @include cube($width, $height, $depth);
+  }
+  &-foot4 {
+    bottom: 5px;
+    right: 5px;
+
+    $width: 3px;
+    $height: 40px;
+    $depth: 1.5px;
+    @include cube($width, $height, $depth);
+  }
+}

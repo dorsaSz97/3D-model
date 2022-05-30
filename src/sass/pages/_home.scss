@@ -1,0 +1,166 @@
+@use '../abstracts' as *;
+
+// Base: 400*400
+.house {
+  position: absolute;
+  width: $base-w;
+  height: $base-h;
+  transform: perspective(1200px) rotateX(70deg) rotateZ(45deg)
+    translateZ(-100px);
+}
+
+// Floor: 360*360*5
+.floor {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+
+  width: 360px;
+  height: 360px;
+
+  $width: 360px;
+  $height: 5px;
+  $depth: 180px;
+  @include cube($width, $height, $depth);
+
+  & > * {
+    background: url('../assets/img/wood.png') center center/cover no-repeat;
+  }
+}
+
+// Half wall left: 380*20*20
+.hwallL {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 380px;
+  height: 20px;
+
+  $width: 380px;
+  $height: 20px;
+  $depth: 10px;
+  @include cube($width, $height, $depth);
+
+  & > * {
+    background: $color-black-dark;
+  }
+  &__top {
+    background: linear-gradient(
+      to right,
+      $color-black-light,
+      $color-black-dark 45%
+    );
+  }
+}
+
+// Half wall right: 20*400*20
+.hwallR {
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  width: 20px;
+  height: 400px;
+
+  $width: 20px;
+  $height: 20px;
+  $depth: 200px;
+  @include cube($width, $height, $depth);
+
+  & > * {
+    background: $color-black-dark;
+  }
+
+  &__right {
+    background: linear-gradient(
+      to right,
+      $color-black-medium 30%,
+      $color-black-dark
+    );
+  }
+
+  &__top {
+    background: linear-gradient(
+      to top,
+      $color-black-dark 15%,
+      $color-black-medium 45%,
+      $color-black-light
+    );
+  }
+}
+
+// Wall left: 20*380*220
+.wallL {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 20px;
+  height: 380px;
+
+  $width: 20px;
+  $height: 220px;
+  $depth: 190px;
+  @include cube($width, $height, $depth);
+
+  & > * {
+    background: $color-black-dark;
+  }
+
+  &__front {
+    background: linear-gradient(to top, $color-black-light, $color-black-dark);
+  }
+
+  &__right {
+    background: linear-gradient(
+      to bottom,
+      darken($color-black-dark, 0.5%),
+      lighten($color-black-medium, 2.8%) 45%,
+      lighten($color-black-medium, 2.2%) 90%
+    );
+  }
+
+  &__top {
+    background: $color-black-light;
+  }
+}
+
+// Wall right: 360*20*220
+.wallR {
+  position: absolute;
+  top: 0;
+  left: 20px;
+
+  width: 360px;
+  height: 20px;
+
+  $width: 360px;
+  $height: 220px;
+  $depth: 10px;
+  @include cube($width, $height, $depth);
+
+  & > * {
+    background: $color-black-dark;
+  }
+
+  &__front {
+    background: linear-gradient(
+      to right,
+      $color-black-medium,
+      $color-black-light
+    );
+  }
+
+  &__right {
+    background: linear-gradient(
+      to bottom,
+      $color-black-medium,
+      $color-black-dark
+    );
+  }
+
+  &__top {
+    background: $color-black-light;
+  }
+}
