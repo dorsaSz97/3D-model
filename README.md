@@ -1,6 +1,6 @@
 # 3D Room Model
 
-This is my 16th project, model of a 3D Room with only CSS(SASS).
+This is a model of a 3D Room with only CSS(SASS).
 
 Explore the room for yourself... ;)
 
