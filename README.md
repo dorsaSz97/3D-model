@@ -1,4 +1,4 @@
-# 3D Room Model
+# 3D Room Model (not responsive)
 
 This is a model of a 3D Room with only CSS(SASS).
 
